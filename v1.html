@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>레아비전 · 본사 시안1</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;family=Outfit:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;500;600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      fontFamily: {
+        "display-lg": ["Outfit", "Noto Sans KR", "sans-serif"],
+        "headline-lg": ["Outfit", "Noto Sans KR", "sans-serif"],
+        "headline-md": ["Outfit", "Noto Sans KR", "sans-serif"],
+        "headline-sm": ["Outfit", "Noto Sans KR", "sans-serif"],
+        "body-lg": ["Inter", "Noto Sans KR", "sans-serif"],
+        "body-md": ["Inter", "Noto Sans KR", "sans-serif"],
+        "body-sm": ["Inter", "Noto Sans KR", "sans-serif"],
+        "label-lg": ["Space Grotesk", "Noto Sans KR", "sans-serif"],
+        "label-md": ["Space Grotesk", "Noto Sans KR", "sans-serif"],
+        "label-sm": ["Space Grotesk", "Noto Sans KR", "sans-serif"],
+        "mono": ["JetBrains Mono", "Noto Sans KR", "monospace"],
+        "kr": ["Noto Sans KR", "sans-serif"]
+      },
+      fontSize: {
+        "display-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+        "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+        "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0", fontWeight: "400" }],
+        "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }],
+        "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.06em", fontWeight: "600" }],
+        "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600" }],
+        "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }]
+      }
+    } }
+  };
+</script>
+<style>
+  html,body{margin:0;padding:0;background:#fff}
+  html{scroll-behavior:smooth}
+  body{min-width:1440px;font-family:"Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;line-height:1}
+  .stage{position:relative;width:1440px;margin:0 auto}
+  .abs{position:absolute}
+  .kr{font-family:"Noto Sans KR",sans-serif;letter-spacing:0}
+  /* 오른쪽 퀵메뉴 */
+  .quick{position:absolute;width:94px;height:427px;border-radius:48px;background:linear-gradient(180deg,#3f84e5,#17478c);opacity:.95;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:32px 0 29px;z-index:5}
+  .quick a{font:500 17px/24px "Noto Sans KR";color:#fff;white-space:nowrap;transition:opacity .2s}
+  .quick a:hover{opacity:.7}
+  .quick i{display:block;width:68px;height:1px;background:rgba(255,255,255,.3)}
+</style>
+</head>
+<body class="text-slate-900">
+<!-- 시안1 · 2단 헤더 + 사진 히어로 (10/29 Figma 수정본: 메뉴 5개, 퀵메뉴 없음) -->
+<header class="relative bg-white z-20">
+  <div class="stage" style="height:85px">
+    <a href="#top" class="abs" style="left:68px;top:17px;width:70px;height:54px"><img src="assets/rheavision-logo-1-04.svg" alt="RHEA VISION" style="width:70px;height:54px"/></a>
+    <a href="#demo" class="abs flex items-center justify-center kr font-bold text-white hover:opacity-90 transition-opacity" style="left:1051px;top:23px;width:114px;height:44px;border-radius:23px;background:#04225e;font-size:14.8px">도입 문의</a>
+    <button class="abs material-symbols-outlined" style="left:1212px;top:31px;font-size:28px;color:#111" aria-label="검색">search</button>
+    <button class="abs material-symbols-outlined" style="left:1280px;top:31px;font-size:28px;color:#111" aria-label="언어">language</button>
+    <button class="abs material-symbols-outlined" style="left:1350px;top:31px;font-size:28px;color:#111" aria-label="로그인">person</button>
+  </div>
+  <div style="height:1px;background:#e2e2e2"></div>
+  <nav class="stage kr font-bold" style="height:67px;font-size:17px;line-height:24px;color:#222">
+    <a href="#top" class="abs whitespace-nowrap hover:text-[#1d4ed8] transition-colors" style="left:476px;top:20px">회사소개</a>
+    <a href="#vision-arch" class="abs whitespace-nowrap hover:text-[#1d4ed8] transition-colors" style="left:592px;top:20px">키오에듀</a>
+    <a href="#specs" class="abs whitespace-nowrap hover:text-[#1d4ed8] transition-colors" style="left:707px;top:20px">교육</a>
+    <a href="#cases" class="abs whitespace-nowrap hover:text-[#1d4ed8] transition-colors" style="left:791px;top:20px">도입 사례</a>
+    <a href="#footer" class="abs whitespace-nowrap hover:text-[#1d4ed8] transition-colors" style="left:907px;top:20px">자료실</a>
+  </nav>
+  <div style="height:1px;background:#e2e2e2"></div>
+</header>
+<section id="top" class="relative overflow-hidden" style="height:656px;background:#0b1d4a url(assets/hero1_bg.jpg) center/cover no-repeat">
+  <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.1) 50%,rgba(0,5,29,.45) 100%)"></div>
+  <div class="stage h-full kr text-white text-center">
+    <p class="abs left-0 right-0 font-bold" style="top:195px;font-size:38px;line-height:57px">디지털 교육과 돌봄을 함께 잇는</p>
+    <h1 class="abs left-0 right-0 font-bold" style="top:271px;font-size:70px;line-height:57px">레아비전</h1>
+    <p class="abs left-0 right-0" style="top:389px;font-size:21.6px;line-height:31px">키오에듀와 RV2000으로 현장을 돕습니다</p>
+    <a href="#vision-arch" class="abs flex items-center justify-center bg-white font-bold hover:bg-slate-100 transition-colors" style="left:631px;top:448px;width:161px;height:44px;border-radius:23px;font-size:14.8px;color:#111">자세히 알아보기</a>
+  </div>
+</section>
+<main>
+<!-- 지표 띠 -->
+<section class="w-full" style="background:#e7eaf0;height:215px">
+<div class="max-w-7xl mx-auto px-8 h-full flex items-center">
+<div class="grid grid-cols-4 gap-10 w-full" style="padding-left:56px;margin-top:-10px">
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center text-slate-900 shadow-sm"><span class="material-symbols-outlined text-[26px]">domain</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-slate-900 font-bold tracking-tight">1,200+</span><span class="font-body-sm text-body-sm text-slate-600">도입 사이트</span></div></div>
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center text-blue-700 shadow-sm"><span class="material-symbols-outlined text-[26px]">verified</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-slate-900 font-bold tracking-tight">&lt; 0.001%</span><span class="font-body-sm text-body-sm text-slate-600">출입 오류율</span></div></div>
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center text-slate-800 shadow-sm"><span class="material-symbols-outlined text-[26px]">settings_suggest</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-slate-900 font-bold tracking-tight">24/7/365</span><span class="font-body-sm text-body-sm text-slate-600">실시간 관제</span></div></div>
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center text-blue-800 shadow-sm"><span class="material-symbols-outlined text-[26px]">timer</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-slate-900 font-bold tracking-tight">99.999%</span><span class="font-body-sm text-body-sm text-slate-600">가동 신뢰성</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- 3D 뎁스 센서 -->
+<section class="w-full bg-white relative overflow-hidden" id="vision-arch" style="padding:190px 0 160px">
+<div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col gap-[120px]">
+<div class="flex items-end gap-[180px]">
+<h2 class="font-display-lg text-display-lg text-slate-900 tracking-tight font-bold" style="line-height:52px">보이지 않는 차이까지<br/>포착하는<br/>초정밀 3D 뎁스 센서</h2>
+<p class="font-body-lg text-body-lg text-slate-600" style="width:370px;margin-bottom:-2px">독립형 3D ToF 센서와 Dual IR 카메라가 300만 개 포인트 클라우드로 위변조를 완벽 차단합니다.</p>
+</div>
+<div class="grid grid-cols-12 gap-10 items-stretch">
+<div class="col-span-7 rounded-2xl overflow-hidden shadow-xl relative group" style="height:603px;background:#c6cfdb">
+<img alt="RV2000 카메라 모듈" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="assets/sensor.jpg"/>
+</div>
+<div class="col-span-5 flex flex-col gap-[21px]" style="height:603px">
+<div class="flex-1 px-8 rounded-xl bg-white border border-slate-200/90 shadow-sm flex flex-col justify-center gap-3 hover:border-slate-900 hover:shadow-md transition-all">
+<span class="text-blue-700" style="font:300 32px/40px 'Space Grotesk';letter-spacing:.3em">BIOMETRICS</span>
+<h3 class="font-headline-sm text-headline-sm text-slate-900">3D 생체 공간 매핑</h3>
+<p class="font-body-sm text-body-sm text-slate-600 leading-relaxed">미세 표정과 윤곽 뎁스를 실시간 스캔하여 사진 및 고해상도 태블릿 스푸핑을 100% 원천 차단.</p>
+</div>
+<div class="flex-1 px-8 rounded-xl bg-white border border-slate-200/90 shadow-sm flex flex-col justify-center gap-3 hover:border-blue-700 hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-slate-900 text-[28px]">memory</span>
+<h3 class="font-headline-sm text-headline-sm text-slate-900">독립형 NPU 엣지 연산</h3>
+<p class="font-body-sm text-body-sm text-slate-600 leading-relaxed">클라우드 전송 없이 기기 내부에서 모든 판독을 완결해 네트워크 장애 시에도 정상 작동합니다.</p>
+</div>
+<div class="flex-1 px-8 rounded-xl bg-white border border-slate-200/90 shadow-sm flex flex-col justify-center gap-3 hover:border-slate-900 hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-slate-800 text-[28px]">contactless</span>
+<h3 class="font-headline-sm text-headline-sm text-slate-900">올인원 스마트 인터페이스</h3>
+<p class="font-body-sm text-body-sm text-slate-600 leading-relaxed">비접촉 공중 제스처, 동적 모바일 QR, NFC 사원증, 전자신분증까지 즉각 동시 지원.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 하드웨어 와이드 배너 -->
+<section class="w-full bg-slate-50 relative border-y border-slate-200" id="showcase" style="padding:190px 0 120px">
+<div class="max-w-7xl mx-auto px-8 flex flex-col gap-[70px]">
+<div class="flex items-center justify-between">
+<h2 class="font-display-lg text-display-lg text-slate-900 tracking-tight font-bold">공간의 품격을 완성하는 하드웨어</h2>
+<p class="font-body-lg text-body-lg text-slate-600" style="width:410px;margin-right:38px">밀링 알루미늄 유니바디와 안티글레어 디스플레이로 스마트 오피스 및 최고 보안 시설에 최적화되었습니다.</p>
+</div>
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl border border-slate-200 group bg-black">
+<img alt="RV2000 하드웨어" class="w-full h-[620px] object-cover transform transition-transform duration-700 group-hover:scale-105" src="assets/hardware.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="px-4 py-2 rounded-lg bg-white/95 backdrop-blur-md text-slate-900 font-label-sm text-label-sm border border-slate-200/90 shadow-md flex items-center gap-2 font-semibold"><span class="material-symbols-outlined text-blue-700 text-[18px]">verified</span>CNC 항공 알루미늄 일체형 바디</span>
+<span class="px-4 py-2 rounded-lg bg-white/95 backdrop-blur-md text-slate-900 font-label-sm text-label-sm border border-slate-200/90 shadow-md flex items-center gap-2 font-semibold"><span class="material-symbols-outlined text-blue-700 text-[18px]">wb_sunny</span>700 nits 고휘도 안티글레어 IPS</span>
+<span class="px-4 py-2 rounded-lg bg-white/95 backdrop-blur-md text-slate-900 font-label-sm text-label-sm border border-slate-200/90 shadow-md flex items-center gap-2 font-semibold"><span class="material-symbols-outlined text-blue-700 text-[18px]">shield</span>IP65 완전 밀폐 방수 / IK08 충격 보호</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-slate-900 text-white font-label-md text-label-md flex items-center gap-2 hover:bg-slate-800 transition-colors shadow-lg font-semibold" href="#specs"><span>하드웨어 규격 보기</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 하드웨어 스펙 -->
+<section class="w-full bg-white relative" id="specs" style="padding:170px 0 160px">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="font-headline-lg text-headline-lg text-slate-900 tracking-tight font-bold" style="margin-bottom:110px">산업용 표준을 상회하는 하드웨어 스펙</h2>
+<div class="grid grid-cols-4 gap-6">
+<div class="flex flex-col bg-white p-7 rounded-xl border border-slate-200/90 shadow-sm hover:border-slate-300 transition-all"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-blue-700 text-[28px]">display_settings</span><span class="font-mono text-[11px] text-slate-500 font-semibold tracking-[.1em]">MOD-01</span></div><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-2">디스플레이</h4><p class="font-body-sm text-body-sm text-slate-600 mb-6">직사광선 환경에서도 선명한 고휘도 패널</p><div class="mt-auto flex flex-col gap-2 font-body-sm text-body-sm"><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">규격</span><span class="text-slate-900 font-medium">21.5" FHD IPS</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">휘도</span><span class="text-blue-700 font-semibold">700 nits</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">표면</span><span class="text-slate-900 font-medium">7H 안티글레어</span></div></div></div>
+<div class="flex flex-col bg-white p-7 rounded-xl border border-slate-200/90 shadow-sm hover:border-slate-300 transition-all"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-slate-900 text-[28px]">center_focus_strong</span><span class="font-mono text-[11px] text-slate-500 font-semibold tracking-[.1em]">MOD-02</span></div><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-2">센서 어레이</h4><p class="font-body-sm text-body-sm text-slate-600 mb-6">초고속 비접촉 3D 광학 인식 카메라</p><div class="mt-auto flex flex-col gap-2 font-body-sm text-body-sm"><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">광학계</span><span class="text-slate-900 font-medium">Dual 4K + IR</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">뎁스</span><span class="text-blue-700 font-semibold">3D ToF 모듈</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">조명</span><span class="text-slate-900 font-medium">조도 반응형 LED</span></div></div></div>
+<div class="flex flex-col bg-white p-7 rounded-xl border border-slate-200/90 shadow-sm hover:border-slate-300 transition-all"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-blue-700 text-[28px]">verified</span><span class="font-mono text-[11px] text-slate-500 font-semibold tracking-[.1em]">MOD-03</span></div><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-2">섀시 &amp; 내구성</h4><p class="font-body-sm text-body-sm text-slate-600 mb-6">밀링 알루미늄 유니바디 프레임</p><div class="mt-auto flex flex-col gap-2 font-body-sm text-body-sm"><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">소재</span><span class="text-slate-900 font-medium">CNC 항공 알루미늄</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">방진/방수</span><span class="text-blue-700 font-semibold">IP65 등급</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">내충격</span><span class="text-slate-900 font-medium">IK08 강화유리</span></div></div></div>
+<div class="flex flex-col bg-white p-7 rounded-xl border border-slate-200/90 shadow-sm hover:border-slate-300 transition-all"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-slate-900 text-[28px]">hub</span><span class="font-mono text-[11px] text-slate-500 font-semibold tracking-[.1em]">MOD-04</span></div><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-2">통신 &amp; 인터페이스</h4><p class="font-body-sm text-body-sm text-slate-600 mb-6">스피드게이트 및 사내 BMS 즉시 연동</p><div class="mt-auto flex flex-col gap-2 font-body-sm text-body-sm"><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">무선망</span><span class="text-slate-900 font-medium">Wi-Fi 6E / 5G</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">유선망</span><span class="text-blue-700 font-semibold">Dual GbE + PoE+</span></div><div class="flex justify-between py-1.5 bg-slate-50 px-2.5 rounded border border-slate-100"><span class="text-slate-500">프로토콜</span><span class="text-slate-900 font-medium">OSDP v2 / Wiegand</span></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- 도입 현장 -->
+<section class="w-full bg-slate-50 border-y border-slate-200" id="cases" style="padding:180px 0 160px">
+<div class="max-w-7xl mx-auto px-8 flex flex-col gap-[70px]">
+<h2 class="font-headline-lg text-headline-lg text-slate-900 tracking-tight font-bold text-center">최고 보안이 필요한 모든 현장의 표준</h2>
+<div class="grid grid-cols-4 gap-6">
+<div class="flex flex-col bg-white rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 border border-slate-200/90 shadow-sm hover:shadow-md"><div class="relative h-44 w-full bg-cover bg-center" style="background-image:url(assets/case1.jpg)"><span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-slate-900/90 font-label-sm text-label-sm text-white uppercase font-semibold">ENTERPRISE HQ</span></div><div class="p-5 flex flex-col flex-1"><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-1">스마트 사옥</h4><p class="font-body-sm text-body-sm text-slate-600 mb-4">워크스루 무정차 출입</p><div class="mt-auto pt-3 border-t border-slate-100 text-[11px] text-blue-700 font-mono font-bold">처리율 +420%</div></div></div>
+<div class="flex flex-col bg-white rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 border border-slate-200/90 shadow-sm hover:shadow-md"><div class="relative h-44 w-full bg-cover bg-center" style="background-image:url(assets/case2.jpg)"><span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-slate-900/90 font-label-sm text-label-sm text-white uppercase font-semibold">HEALTHCARE</span></div><div class="p-5 flex flex-col flex-1"><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-1">대형 병원</h4><p class="font-body-sm text-body-sm text-slate-600 mb-4">완전 비접촉 감염 관리</p><div class="mt-auto pt-3 border-t border-slate-100 text-[11px] text-blue-700 font-mono font-bold">대기시간 -85%</div></div></div>
+<div class="flex flex-col bg-white rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 border border-slate-200/90 shadow-sm hover:shadow-md"><div class="relative h-44 w-full bg-cover bg-center" style="background-image:url(assets/case3.jpg)"><span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-slate-900/90 font-label-sm text-label-sm text-white uppercase font-semibold">AVIATION</span></div><div class="p-5 flex flex-col flex-1"><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-1">공항 &amp; 호텔</h4><p class="font-body-sm text-body-sm text-slate-600 mb-4">스마트패스 원스톱 수속</p><div class="mt-auto pt-3 border-t border-slate-100 text-[11px] text-blue-700 font-mono font-bold">수속 3.2초 완료</div></div></div>
+<div class="flex flex-col bg-white rounded-xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 border border-slate-200/90 shadow-sm hover:shadow-md"><div class="relative h-44 w-full bg-cover bg-center" style="background-image:url(assets/case4.jpg)"><span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-slate-900/90 font-label-sm text-label-sm text-white uppercase font-semibold">FINANCE &amp; GOV</span></div><div class="p-5 flex flex-col flex-1"><h4 class="font-headline-sm text-headline-sm text-slate-900 mb-1">금융 &amp; 전산센터</h4><p class="font-body-sm text-body-sm text-slate-600 mb-4">FIPS 140-3 보안 인프라</p><div class="mt-auto pt-3 border-t border-slate-100 text-[11px] text-blue-700 font-mono font-bold">보안 침해 0건</div></div></div>
+</div>
+</div>
+</section>
+
+<!-- 도입 문의 -->
+<section class="w-full bg-white relative overflow-hidden" id="demo" style="padding:160px 0">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-100/60 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-slate-200/50 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-8 relative z-10">
+<div class="bg-slate-50 rounded-2xl p-14 border border-slate-200/90 shadow-xl flex items-center justify-between gap-12">
+<div class="flex flex-col gap-4">
+<h2 class="font-display-lg text-display-lg text-slate-900 tracking-tight leading-tight font-bold whitespace-nowrap">귀사의 공간에<br/><span class="text-blue-700">RV2000</span> 를 도입하세요</h2>
+<p class="font-body-md text-body-md text-slate-600 leading-relaxed mt-10">무상 현장 실사 컨설팅과 전담 엔지니어 매칭을 지원합니다.</p>
+<div class="flex items-center gap-6 font-label-sm text-label-sm text-slate-600 -mt-2">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-700 text-[18px]">done</span> 현장 데모 무상 지원</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-700 text-[18px]">done</span> 전담 기술 PM 배정</span>
+</div>
+</div>
+<div class="w-96 bg-white rounded-xl p-6 border border-slate-200/90 shadow-lg flex flex-col gap-4">
+<form class="flex flex-col gap-3" id="inquiry-form">
+<div><label class="block font-label-sm text-label-sm text-slate-600 mb-1" for="f-org">회사명 / 기관명</label><input id="f-org" class="w-full bg-slate-50 px-3.5 py-2.5 rounded text-slate-900 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-slate-900 placeholder:text-slate-400 transition-all border border-slate-200" placeholder="(주)엔터프라이즈" required type="text"/></div>
+<div><label class="block font-label-sm text-label-sm text-slate-600 mb-1" for="f-name">담당자 성함 &amp; 연락처</label><input id="f-name" class="w-full bg-slate-50 px-3.5 py-2.5 rounded text-slate-900 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-slate-900 placeholder:text-slate-400 transition-all border border-slate-200" placeholder="홍길동 (010-0000-0000)" required type="text"/></div>
+<div><label class="block font-label-sm text-label-sm text-slate-600 mb-1" for="f-mail">업무용 이메일</label><input id="f-mail" class="w-full bg-slate-50 px-3.5 py-2.5 rounded text-slate-900 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-slate-900 placeholder:text-slate-400 transition-all border border-slate-200" placeholder="contact@company.com" required type="email"/></div>
+<button class="mt-2 w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-label-lg text-label-lg rounded transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg font-semibold" type="submit"><span>신청서 전송</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+<p id="form-done" class="hidden font-body-sm text-body-sm text-blue-700 text-center">접수되었습니다. 담당 엔지니어가 연락드립니다.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="footer" class="w-full bg-slate-50 border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-8 py-14">
+<div class="flex mb-12">
+<div class="flex flex-col gap-4" style="width:499px;padding-right:60px">
+<div class="flex items-center gap-4"><img src="assets/rheavision-logo-1-04.svg" alt="RHEA VISION" style="width:60px;height:46px"/><span class="font-headline-sm text-headline-sm text-slate-900 uppercase font-bold">AURA-K SERIES</span></div>
+<p class="font-body-md text-body-md text-slate-600 max-w-md">차세대 엣지 AI 비전 및 바이오메트릭 광학 센서 기술이 결합된 하이엔드 인텔리전트 무인 키오스크 시스템입니다. 무결점 보안 인증과 초저지연 연산을 지원합니다.</p>
+<div class="flex items-center gap-2 mt-2"><span class="px-2.5 py-1 rounded bg-white border border-slate-200 text-slate-700 font-label-sm text-label-sm uppercase font-semibold">FIPS 140-3</span><span class="px-2.5 py-1 rounded bg-white border border-slate-200 text-slate-700 font-label-sm text-label-sm uppercase font-semibold">ISO/IEC 27001</span><span class="px-2.5 py-1 rounded bg-white border border-slate-200 text-slate-700 font-label-sm text-label-sm uppercase font-semibold">K-Biometrics Cert</span></div>
+</div>
+<div class="flex flex-col gap-2.5" style="width:250px"><span class="font-label-lg text-label-lg text-slate-900 tracking-wider mb-1 font-bold">하드웨어 스펙</span><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#specs">광학 센서 어레이</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#specs">NPU 엣지 컴퓨팅 모듈</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#specs">초음파 생체 인식기</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#specs">산업용 섀시 &amp; 디스플레이</a></div>
+<div class="flex flex-col gap-2.5" style="width:249px"><span class="font-label-lg text-label-lg text-slate-900 tracking-wider mb-1 font-bold">기술 문서 &amp; 보안</span><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#vision-arch">인공지능 비전 SDK</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#vision-arch">종단간 데이터 암호화 규약</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#top">규제 준수 컴플라이언스</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#demo">하드웨어 유지보수 지침</a></div>
+<div class="flex flex-col gap-2.5"><span class="font-label-lg text-label-lg text-slate-900 tracking-wider mb-1 font-bold">기업 정보 &amp; 솔루션</span><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#top">회사 소개</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#cases">글로벌 공항 및 금융 구축 사례</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#demo">솔루션 파트너십</a><a class="font-body-sm text-body-sm text-slate-600 hover:text-slate-900 transition-colors" href="#demo">POC 데모 장비 대여</a></div>
+</div>
+<div class="pt-8 border-t border-slate-200 flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1"><span class="font-label-sm text-label-sm text-slate-500">© 2025 AURA SYSTEMS INC. ALL RIGHTS RESERVED.</span><span class="font-body-sm text-body-sm text-slate-500">서울특별시 강남구 테헤란로 엣지 테크놀로지 센터 14F | 사업자 등록번호: 104-86-90211</span></div>
+<div class="flex items-center gap-8 font-label-sm text-label-sm text-slate-600"><a href="#footer" class="hover:text-slate-900">개인정보처리방침</a><a href="#footer" class="hover:text-slate-900">보안 인증서 검증</a><a href="#footer" class="hover:text-slate-900">이용약관</a></div>
+</div>
+</div>
+</footer>
+<script>
+  // 1440 기준 레이아웃: 좁은 창에서는 비율대로 축소
+  const fit = () => {
+    const z = window.innerWidth / 1440;
+    document.documentElement.style.zoom = z < 1 ? z : '';
+  };
+  fit();
+  window.addEventListener('resize', fit);
+  document.getElementById('inquiry-form').addEventListener('submit', e => {
+    e.preventDefault();
+    e.target.reset();
+    document.getElementById('form-done').classList.remove('hidden');
+  });
+</script>
+</body></html>

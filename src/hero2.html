@@ -1,0 +1,98 @@
+<!-- 시안2 · 사진 위 헤더 + 2.5초 자동 슬라이드 히어로 -->
+<style>
+  .hs-track{position:absolute;inset:0;display:flex;transition:transform .9s cubic-bezier(.65,0,.35,1)}
+  .hs-track.no-anim{transition:none}
+  .hs-slide{position:relative;flex:0 0 100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
+  .hs-slide.tint::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,92,.55) 0%,rgba(6,28,92,.18) 45%,rgba(6,28,92,.25) 100%)}
+  .hs-ctrl{position:absolute;left:46px;top:674px;width:138px;height:46px;display:flex;border:1px solid #fff}
+  .hs-ctrl button{flex:1;display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s}
+  .hs-ctrl button+button{border-left:1px solid #fff}
+  .hs-ctrl button:hover{background:rgba(255,255,255,.15)}
+  .hs-ctrl .material-symbols-outlined{font-size:22px}
+  .hs-pause{width:6px;height:14px;border-left:2px solid #fff;border-right:2px solid #fff}
+  .nav2 a{transition:opacity .2s}.nav2 a:hover{opacity:.7}
+</style>
+<section id="top" class="relative overflow-hidden" style="height:810px;background:#0c235e">
+  <div class="hs-track" id="hsTrack">
+    <div class="hs-slide" style="background-image:url(assets/hero2_bg.jpg)"></div>
+    <div class="hs-slide tint" style="background-image:url(assets/slide_2036.jpg)"></div>
+    <div class="hs-slide tint" style="background-image:url(assets/slide_2030.jpg)"></div>
+    <div class="hs-slide tint" style="background-image:url(assets/slide_2033.jpg)"></div>
+    <div class="hs-slide tint" style="background-image:url(assets/slide_2031.jpg)"></div>
+  </div>
+  <div class="absolute left-0 right-0 pointer-events-none" style="top:412px;bottom:0;background:linear-gradient(180deg,rgba(12,35,94,0) 0%,rgba(12,35,94,.55) 100%)"></div>
+
+  <div class="stage h-full">
+    <header class="abs left-0 right-0 top-0" style="height:120px;z-index:6">
+      <a href="#top" class="abs flex items-center" style="left:43px;top:29px">
+        <img src="assets/rheavision-logo-1-04.svg" alt="RHEA VISION" style="width:69px;height:52px;filter:brightness(0) invert(1)"/>
+        <span class="kr font-bold text-white" style="margin-left:22px;font-size:27px;line-height:36px;margin-top:-6px">주식회사 레아비전</span>
+      </a>
+      <nav class="nav2 abs kr text-white" style="top:40px;left:692px;font-size:20.5px;line-height:29px;font-weight:500">
+        <a href="#top" class="abs whitespace-nowrap" style="left:0">회사소개</a>
+        <a href="#vision-arch" class="abs whitespace-nowrap" style="left:143px">키오에듀</a>
+        <a href="#specs" class="abs whitespace-nowrap" style="left:286px">교육 프로그램</a>
+        <a href="#cases" class="abs whitespace-nowrap" style="left:472px">도입 사례</a>
+        <a href="#demo" class="abs whitespace-nowrap" style="left:613px">고객지원</a>
+      </nav>
+    </header>
+
+    <div class="abs kr text-white" style="left:109px;top:203px;z-index:4">
+      <p class="font-bold whitespace-nowrap" style="font-size:55px;line-height:71px;color:#a2d5ff">누구나 쉬운 디지털 생활</p>
+      <p class="whitespace-nowrap" style="font-size:64px;line-height:71px;margin-top:16px">[ <b class="font-bold" style="font-size:80px;margin:0 22px 0 8px">레아비전</b>]이 함께 합니다.</p>
+    </div>
+
+    <div class="abs" style="left:-1000px;top:559px;width:1742px;height:206px;background:rgba(100,118,149,.75);z-index:4"></div>
+    <div class="abs" style="left:0;top:559px;z-index:5">
+      <p class="abs kr text-white whitespace-nowrap" style="left:46px;top:48px;font-size:18.2px;line-height:26px">주식회사 레아비전</p>
+    </div>
+    <div class="hs-ctrl" style="z-index:5">
+      <button type="button" id="hsPrev" aria-label="이전 사진"><span class="material-symbols-outlined">chevron_left</span></button>
+      <button type="button" id="hsPause" aria-label="일시정지"><span class="hs-pause"></span></button>
+      <button type="button" id="hsNext" aria-label="다음 사진"><span class="material-symbols-outlined">chevron_right</span></button>
+    </div>
+
+    <div class="quick" style="left:1286px;top:346px">
+      <a href="#top">기관 담당자</a><i></i><a href="#specs">교육 실무자</a><i></i><a href="#footer">자료실</a><i></i><a href="#demo">고객지원</a><i></i><a href="#demo">도입 문의</a>
+    </div>
+  </div>
+</section>
+<script>
+(() => {
+  const INTERVAL = 2500; // 사진 넘어가는 간격 (ms)
+  const track = document.getElementById('hsTrack');
+  const slides = [...track.children];
+  const n = slides.length;
+  track.appendChild(slides[0].cloneNode(true)); // 마지막→첫 장 이음새 없이
+  let i = 0, timer = null, paused = false;
+  const go = (k, anim = true) => {
+    track.classList.toggle('no-anim', !anim);
+    i = k;
+    track.style.transform = `translateX(${-i * 100}%)`;
+  };
+  track.addEventListener('transitionend', () => {
+    if (i >= n) go(0, false);
+  });
+  const next = () => {
+    if (i >= n) { go(0, false); track.offsetWidth; }
+    go(i + 1);
+  };
+  const prev = () => {
+    if (i <= 0) { go(n, false); track.offsetWidth; }
+    go(i - 1);
+  };
+  const start = () => { clearInterval(timer); if (!paused) timer = setInterval(next, INTERVAL); };
+  document.getElementById('hsNext').onclick = () => { next(); start(); };
+  document.getElementById('hsPrev').onclick = () => { prev(); start(); };
+  const pb = document.getElementById('hsPause');
+  pb.onclick = () => {
+    paused = !paused;
+    pb.firstElementChild.className = paused ? 'material-symbols-outlined' : 'hs-pause';
+    pb.firstElementChild.textContent = paused ? 'play_arrow' : '';
+    pb.setAttribute('aria-label', paused ? '재생' : '일시정지');
+    start();
+  };
+  document.addEventListener('visibilitychange', () => document.hidden ? clearInterval(timer) : start());
+  start();
+})();
+</script>
